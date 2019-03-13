@@ -10,13 +10,13 @@ import UIKit
 
 
 var listaRazas:[Mariposa] = [
-    Mariposa(raza: "Monarca", tipo: "Ledidóptera", imagen: UIImage(named: "monarca")!, descripcion: "Algunos dicen que las mariposas monarca son las más bellas entre todas las especies, son consideradas como el rey de las mariposas, de ahí el nombre de “monarca”."),
-    Mariposa(raza: "Morpho Azul", tipo: "Ledidóptera", imagen: UIImage(named: "morphoAzul")!, descripcion: "Existen decenas de miles de especies de mariposas en el mundo, una de las más bellas son las mariposas morpho azules, muy buscadas por coleccionistas y personas en general que desean admirar el maravilloso color de sus cuerpos."),
-    Mariposa(raza: "Alas de Pájaro", tipo: "Ledidóptera", imagen: UIImage(named: "alasPajaro")!, descripcion: "La mariposa Alas de Pájaro es la más grande de las mariposas en el mundo, con una envergadura de hasta 30 cm de ancho."),
-    Mariposa(raza: "Tigre", tipo: "Ledidóptera", imagen: UIImage(named: "tigre")!, descripcion: "La mariposa tigre es una fuerte voladora que posee marcas distintivas en forma de rayas amarillas y negras en las alas y el cuerpo. Algunas hembras son de color marrón o negro, imitando a la mariposa tigre."),
-    Mariposa(raza: "Ulises", tipo: "Ledidóptera", imagen: UIImage(named: "ulises")!, descripcion: "La mariposa Ulises es también conocida como la mariposa azul de montaña, el emperador azul y mariposa golondrina azul. "),
-    Mariposa(raza: "Azul común", tipo: "Ledidóptera", imagen: UIImage(named: "azulComun")!, descripcion: "A pesar de su nombre a esta especie ya no se le considera una mariposa común. Todavía sigue siendo la más distribuida en Gran Bretaña, pero muchas colonias de hábitats como paseos en bosques y tierras de cultivo han disminuido su población."),
-    Mariposa(raza: "Cebra", tipo: "Ledidóptera", imagen: UIImage(named: "cebra")!, descripcion: "La mariposa cebra es una mariposa común con marcas distintivas en blanco y negro, de cola alargada en sus alas posteriores, con algunas pequeñas marcas rojas y azules en la parte posterior de las alas y márgenes fuertemente ondulados.")
+    Mariposa(raza: "Monarca", tipo: "Ledidóptera", imagen: UIImage(named: "monarca")!, descripcion: "Algunos dicen que las mariposas monarca son las más bellas entre todas las especies, son consideradas como el rey de las mariposas, de ahí el nombre de “monarca”.",isLiked:false),
+    Mariposa(raza: "Morpho Azul", tipo: "Ledidóptera", imagen: UIImage(named: "morphoAzul")!, descripcion: "Existen decenas de miles de especies de mariposas en el mundo, una de las más bellas son las mariposas morpho azules, muy buscadas por coleccionistas y personas en general que desean admirar el maravilloso color de sus cuerpos.",isLiked:false),
+    Mariposa(raza: "Alas de Pájaro", tipo: "Ledidóptera", imagen: UIImage(named: "alasPajaro")!, descripcion: "La mariposa Alas de Pájaro es la más grande de las mariposas en el mundo, con una envergadura de hasta 30 cm de ancho.",isLiked:false),
+    Mariposa(raza: "Tigre", tipo: "Ledidóptera", imagen: UIImage(named: "tigre")!, descripcion: "La mariposa tigre es una fuerte voladora que posee marcas distintivas en forma de rayas amarillas y negras en las alas y el cuerpo. Algunas hembras son de color marrón o negro, imitando a la mariposa tigre.",isLiked:false),
+    Mariposa(raza: "Ulises", tipo: "Ledidóptera", imagen: UIImage(named: "ulises")!, descripcion: "La mariposa Ulises es también conocida como la mariposa azul de montaña, el emperador azul y mariposa golondrina azul. ",isLiked:false),
+    Mariposa(raza: "Azul común", tipo: "Ledidóptera", imagen: UIImage(named: "azulComun")!, descripcion: "A pesar de su nombre a esta especie ya no se le considera una mariposa común. Todavía sigue siendo la más distribuida en Gran Bretaña, pero muchas colonias de hábitats como paseos en bosques y tierras de cultivo han disminuido su población.",isLiked:false),
+    Mariposa(raza: "Cebra", tipo: "Ledidóptera", imagen: UIImage(named: "cebra")!, descripcion: "La mariposa cebra es una mariposa común con marcas distintivas en blanco y negro, de cola alargada en sus alas posteriores, con algunas pequeñas marcas rojas y azules en la parte posterior de las alas y márgenes fuertemente ondulados.",isLiked:false)
 ]
 
 
@@ -60,7 +60,9 @@ class ViewController1: UIViewController,UITableViewDataSource,UITableViewDelegat
         myCell.imagenCell.image = listaRazas[indexPath.row].imagen
         myCell.nombreCell?.text = listaRazas[indexPath.row].raza
         myCell.tipoCell?.text = listaRazas[indexPath.row].tipo
-
+        myCell.imageLike.isHidden = listaRazas[indexPath.row].isLiked ? false : true
+        
+        
         return myCell
     }
     
@@ -81,6 +83,37 @@ class ViewController1: UIViewController,UITableViewDataSource,UITableViewDelegat
         self.navigationController?.pushViewController(detailView, animated: true)
         
     }
+    
+    
+    //FUNCIÓN  SWIPE-ACTION
+    
+    func tableView(_ tableViewSearch: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let isLiked = liked(indexPath:indexPath)
+        //Adjuntamos todas las opciones que necesitemos en modo de array
+        return UISwipeActionsConfiguration(actions: [isLiked])
+    }
+    
+    func liked(indexPath:IndexPath) -> UIContextualAction{
+        
+        let action = UIContextualAction(style: .normal, title: "Like") { (action, view, completion) in
+            listaRazas[indexPath.row].isLiked = !listaRazas[indexPath.row].isLiked
+            
+            self.tableView.reloadRows(at: [indexPath], with: .none)
+            action.title = "You like this!"
+            completion(true)
+        }
+        
+        action.title = listaRazas[indexPath.row].isLiked ? "Dislike!" : "Like"
+        action.backgroundColor =  listaRazas[indexPath.row].isLiked ? UIColor.black : UIColor.red
+        
+        
+        
+        
+       
+        return action
+    }
+    
     
 }
 

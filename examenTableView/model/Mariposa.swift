@@ -15,15 +15,16 @@ class Mariposa{
     var tipo: String
     var descripcion: String
     var imagen: UIImage
-    
+      var isLiked:Bool
 
     
-    init(raza:String,tipo: String,imagen: UIImage,descripcion: String){
+    init(raza:String,tipo: String,imagen: UIImage,descripcion: String,isLiked:Bool){
         
         self.raza = raza
         self.tipo = tipo
         self.descripcion = descripcion
         self.imagen = imagen
+         self.isLiked = isLiked
      
     }
     

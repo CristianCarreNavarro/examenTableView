@@ -17,6 +17,7 @@ class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var tipoCell: UILabel!
     
+    @IBOutlet weak var imageLike: UIImageView!
     
     
     
