@@ -12,14 +12,16 @@ import UIKit
 class Mariposa{
     
     var raza: String
+    var tipo: String
     var descripcion: String
     var imagen: UIImage
     
 
     
-    init(raza:String,descripcion: String,imagen: UIImage){
+    init(raza:String,tipo: String,imagen: UIImage,descripcion: String){
         
         self.raza = raza
+        self.tipo = tipo
         self.descripcion = descripcion
         self.imagen = imagen
      

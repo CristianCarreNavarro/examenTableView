@@ -16,7 +16,6 @@ class ViewController2: UIViewController,UICollectionViewDataSource,UICollectionV
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
-
     }
     
     
@@ -29,6 +28,7 @@ class ViewController2: UIViewController,UICollectionViewDataSource,UICollectionV
         let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellCollection", for: indexPath) as! CollectionCell
         
         myCell.labelCollectionCell.text = listaRazas[indexPath.row].raza
+          myCell.labelTipoCollectionCell.text = listaRazas[indexPath.row].tipo
         myCell.imagenCollectionCell.image = listaRazas[indexPath.row].imagen
         
         return myCell

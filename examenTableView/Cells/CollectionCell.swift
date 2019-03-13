@@ -15,4 +15,5 @@ class CollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var labelCollectionCell: UILabel!
     
+    @IBOutlet weak var labelTipoCollectionCell: UILabel!
 }

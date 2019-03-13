@@ -13,9 +13,9 @@ class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var imagenCell: UIImageView!
     
-    @IBOutlet weak var nombreCell: UILabel!
+    @IBOutlet weak var nombreCell: UILabel!    
     
-    
+    @IBOutlet weak var tipoCell: UILabel!
     
     
     
