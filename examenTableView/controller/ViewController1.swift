@@ -8,17 +8,19 @@
 
 import UIKit
 
+var listaRazas:[Mariposa] = [
+    Mariposa(raza: "Terranova", descripcion: "50-60kg", imagen: UIImage(named: "mariposa1")!),
+    Mariposa(raza: "Terranova2", descripcion: "50-60kg", imagen: UIImage(named: "mariposa1")!),
+    Mariposa(raza: "Terranova3", descripcion: "50-60kg", imagen: UIImage(named: "mariposa1")!),
+    Mariposa(raza: "Terranova4", descripcion: "50-60kg", imagen: UIImage(named: "mariposa1")!)]
+
 class ViewController1: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
     
     
     @IBOutlet weak var tableView: UITableView!
     
-    var listaRazas:[Mariposa] = [
-        Mariposa(raza: "Terranova", descripcion: "50-60kg", imagen: UIImage(named: "mariposa1")!),
-        Mariposa(raza: "Terranova2", descripcion: "50-60kg", imagen: UIImage(named: "mariposa1")!),
-        Mariposa(raza: "Terranova3", descripcion: "50-60kg", imagen: UIImage(named: "mariposa1")!),
-        Mariposa(raza: "Terranova4", descripcion: "50-60kg", imagen: UIImage(named: "mariposa1")!)]
+  
     
     
     override func viewDidLoad() {
@@ -46,7 +48,7 @@ class ViewController1: UIViewController,UITableViewDataSource,UITableViewDelegat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         //enlace con la celda para poder entrar en todas las propiedades de la Celda
-        let myCell = tableView.dequeueReusableCell(withIdentifier: "CellMariposa", for: indexPath)as! TableViewCellController
+        let myCell = tableView.dequeueReusableCell(withIdentifier: "CellMariposa", for: indexPath)as! TableViewCell
         
         myCell.imagenCell.image = listaRazas[indexPath.row].imagen
         myCell.nombreCell?.text = listaRazas[indexPath.row].raza
