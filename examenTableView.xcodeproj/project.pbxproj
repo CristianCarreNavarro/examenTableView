@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184FC2D2223919B7006C3D9D /* ViewControllerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184FC2D1223919B7006C3D9D /* ViewControllerDetail.swift */; };
+		184FC2D422392B29006C3D9D /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184FC2D322392B29006C3D9D /* CollectionCell.swift */; };
 		18A22A862238FA7900E44767 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A22A852238FA7900E44767 /* AppDelegate.swift */; };
-		18A22A882238FA7900E44767 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A22A872238FA7900E44767 /* ViewController.swift */; };
+		18A22A882238FA7900E44767 /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A22A872238FA7900E44767 /* ViewController1.swift */; };
 		18A22A8B2238FA7A00E44767 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A22A892238FA7A00E44767 /* Main.storyboard */; };
 		18A22A8D2238FA7C00E44767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A22A8C2238FA7C00E44767 /* Assets.xcassets */; };
 		18A22A902238FA7C00E44767 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A22A8E2238FA7C00E44767 /* LaunchScreen.storyboard */; };
 		18A22A9B2238FA7C00E44767 /* examenTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A22A9A2238FA7C00E44767 /* examenTableViewTests.swift */; };
 		18A22AA62238FA7C00E44767 /* examenTableViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A22AA52238FA7C00E44767 /* examenTableViewUITests.swift */; };
+		18A22AB72238FDCC00E44767 /* TapBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A22AB62238FDCC00E44767 /* TapBarController.swift */; };
+		18A22AC022390D4200E44767 /* Mariposa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A22ABF22390D4200E44767 /* Mariposa.swift */; };
+		18A22AC222390E8300E44767 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A22AC122390E8300E44767 /* TableViewCell.swift */; };
+		18A22AC42239119400E44767 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A22AC32239119400E44767 /* ViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		184FC2D1223919B7006C3D9D /* ViewControllerDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDetail.swift; sourceTree = "<group>"; };
+		184FC2D322392B29006C3D9D /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		18A22A822238FA7900E44767 /* examenTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = examenTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A22A852238FA7900E44767 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18A22A872238FA7900E44767 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		18A22A872238FA7900E44767 /* ViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
 		18A22A8A2238FA7A00E44767 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18A22A8C2238FA7C00E44767 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18A22A8F2238FA7C00E44767 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +55,10 @@
 		18A22AA12238FA7C00E44767 /* examenTableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = examenTableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A22AA52238FA7C00E44767 /* examenTableViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = examenTableViewUITests.swift; sourceTree = "<group>"; };
 		18A22AA72238FA7C00E44767 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18A22AB62238FDCC00E44767 /* TapBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarController.swift; sourceTree = "<group>"; };
+		18A22ABF22390D4200E44767 /* Mariposa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mariposa.swift; sourceTree = "<group>"; };
+		18A22AC122390E8300E44767 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		18A22AC32239119400E44767 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +93,7 @@
 				18A22A992238FA7C00E44767 /* examenTableViewTests */,
 				18A22AA42238FA7C00E44767 /* examenTableViewUITests */,
 				18A22A832238FA7900E44767 /* Products */,
+				18A22AB92239030900E44767 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +110,10 @@
 		18A22A842238FA7900E44767 /* examenTableView */ = {
 			isa = PBXGroup;
 			children = (
+				18A22AC5223913EC00E44767 /* Cells */,
+				18A22ABE22390D1E00E44767 /* model */,
+				18A22AB32238FCDF00E44767 /* controller */,
 				18A22A852238FA7900E44767 /* AppDelegate.swift */,
-				18A22A872238FA7900E44767 /* ViewController.swift */,
 				18A22A892238FA7A00E44767 /* Main.storyboard */,
 				18A22A8C2238FA7C00E44767 /* Assets.xcassets */,
 				18A22A8E2238FA7C00E44767 /* LaunchScreen.storyboard */,
@@ -123,6 +138,41 @@
 				18A22AA72238FA7C00E44767 /* Info.plist */,
 			);
 			path = examenTableViewUITests;
+			sourceTree = "<group>";
+		};
+		18A22AB32238FCDF00E44767 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				18A22A872238FA7900E44767 /* ViewController1.swift */,
+				18A22AC32239119400E44767 /* ViewController2.swift */,
+				184FC2D1223919B7006C3D9D /* ViewControllerDetail.swift */,
+				18A22AB62238FDCC00E44767 /* TapBarController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		18A22AB92239030900E44767 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18A22ABE22390D1E00E44767 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				18A22ABF22390D4200E44767 /* Mariposa.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		18A22AC5223913EC00E44767 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				18A22AC122390E8300E44767 /* TableViewCell.swift */,
+				184FC2D322392B29006C3D9D /* CollectionCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +243,20 @@
 				TargetAttributes = {
 					18A22A812238FA7900E44767 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.WAC = {
+								enabled = 0;
+							};
+						};
 					};
 					18A22A952238FA7C00E44767 = {
 						CreatedOnToolsVersion = 10.1;
@@ -256,8 +320,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18A22A882238FA7900E44767 /* ViewController.swift in Sources */,
+				18A22A882238FA7900E44767 /* ViewController1.swift in Sources */,
+				184FC2D2223919B7006C3D9D /* ViewControllerDetail.swift in Sources */,
+				18A22AC022390D4200E44767 /* Mariposa.swift in Sources */,
+				184FC2D422392B29006C3D9D /* CollectionCell.swift in Sources */,
 				18A22A862238FA7900E44767 /* AppDelegate.swift in Sources */,
+				18A22AB72238FDCC00E44767 /* TapBarController.swift in Sources */,
+				18A22AC222390E8300E44767 /* TableViewCell.swift in Sources */,
+				18A22AC42239119400E44767 /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,7 +502,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = examenTableView/examenTableView.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 346MLAG495;
 				INFOPLIST_FILE = examenTableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -440,6 +513,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cristian.examenTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -449,7 +523,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = examenTableView/examenTableView.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 346MLAG495;
 				INFOPLIST_FILE = examenTableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -457,6 +534,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cristian.examenTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
